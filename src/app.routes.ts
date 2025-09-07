@@ -10,10 +10,13 @@ export const appRoutes: Routes = [
         path: '',
         component: AppLayout,
         children: [
-            { path: '', component: Dashboard },
+            { path: '', component: Dashboard, data: {breadcrumb: 'Dashboard'}},
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
-            { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') }
+            { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') },
+
+            // import module
+            {path: 'inventory', loadChildren: () => import('./app/inventory/inventory-module').then(m => m.InventoryModule), data: { breadcrumb: 'Inventory' }}
         ]
     },
     { path: 'landing', component: Landing },
