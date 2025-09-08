@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: InputDemo, data: { breadcrumb: 'Inventory Input Demo' }},
-  {path: 'non/production', component: Crud, data: { breadcrumb: 'Inventory Crud' }}
+    {path: '', component: InputDemo, data: { breadcrumb: 'Inventory Input Demo' }},
+    {path: 'non/production', component: Crud, data: { breadcrumb: 'Inventory Crud' }}
 ];
 
 @NgModule({

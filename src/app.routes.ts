@@ -16,7 +16,7 @@ export const appRoutes: Routes = [
             { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') },
 
             // import module
-            {path: 'inventory', loadChildren: () => import('./app/inventory/inventory-module').then(m => m.InventoryModule), data: { breadcrumb: 'Inventory' }}
+            {path: 'inventory', loadChildren: () => import('./app/features/inventory/inventory-module').then(m => m.InventoryModule), data: { breadcrumb: 'Inventory' }}
         ]
     },
     { path: 'landing', component: Landing },
